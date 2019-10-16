@@ -589,9 +589,9 @@ class dump:
   # convert column names assignment to a string, in column order
   
   def names2str(self):
-    ncol = max(self.names.values()) #len(self.snaps[0].atoms[0])
     pairs = self.names.items()
     values = self.names.values()
+    ncol = len(pairs)
     str = ""
     for i in xrange(ncol):
       if i in values: str += pairs[values.index(i)][0] + ' '
